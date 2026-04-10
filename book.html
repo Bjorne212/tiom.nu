@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boka tid hos TIOM - IT-support och hemelektronik">
+    <title>Boka tid - TIOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="img/TIOM Logo-Black.png" alt="TIOM Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Hem</a>
+                <a href="about.html">Om mig</a>
+                <a href="services.html">Tjänster</a>
+                <a href="webdev.html">Webbutveckling</a>
+                <a href="book.html" class="active nav-cta">Boka tid</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                   <h1>Boka ett besök</h1>
+                   <p>Fyll i dina uppgifter och beskriv vad du behöver hjälp med</p>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-content">
+                    <div class="booking-info">
+                        <h2>Så går det till</h2>
+                        <ol class="process-list">
+                            <li><strong>Skapa en förfrågan</strong> - Berätta vad som krånglar eller vad du behöver</li>
+                            <li><strong>Välj en tid</strong> - Ange när det passar dig bäst</li>
+                            <li><strong>Jag bekräftar</strong> - Du får ett SMS eller email från mig</li>
+                            <li><strong>Jag kommer till dig</strong> - Vi löser det tillsammans hemma hos dig</li>
+                        </ol>
+                        
+                        <h3>Priser</h3>
+                        <p class="price-info">
+                            <strong>Pris på plats (efter RUT):</strong> 500 kr/timme<br>
+                            <strong>Support på distans:</strong> Pris på förfrågan<br>
+                            <strong>Webbutveckling:</strong> Pris på begäran
+                        </p>
+                    </div>
+
+                    <div class="booking-form-wrapper">
+                        <form class="booking-form" action="https://formspree.io/f/xqegvgdb" method="POST" data-protected-form>
+                            <input type="hidden" name="_subject" value="Ny bokningsförfrågan från tiom.nu">
+                            <input type="hidden" name="form_type" value="booking">
+                            <input type="hidden" name="started_at" value="">
+                            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Namn *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefon *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+46 701 234 567" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Din adress</label>
+                                    <input type="text" id="address" name="address" placeholder="Gata, husnummer, postort">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Vilken typ av hjälp behöver du? *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">-- Select service --</option>
+                                    <option value="computer-issues">Datorfel & Felsökning</option>
+                                    <option value="software-installation">Programvaruinstallation</option>
+                                    <option value="security">Datorsäkerhet</option>
+                                    <option value="network">Wi-Fi & Nätverk</option>
+                                    <option value="tv-tablet">TV & Surfplattor</option>
+                                    <option value="advice">Rådgivning</option>
+                                    <option value="other">Något annat</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Beskriv ditt problem/behov *</label>
+                                <textarea id="description" name="description" rows="5" placeholder="T.ex. 'Min dator är väldigt trög och jag vet inte varför' eller 'Jag vill installera smarlampor i mitt vardagsrum'" required></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Önskat besöksdatum</label>
+                                    <input type="date" id="date" name="date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Önskat klockslag</label>
+                                    <select id="time" name="time">
+                                        <option value="">-- Välj tid --</option>
+                                        <option value="08:00">08:00 - 09:00</option>
+                                        <option value="09:00">09:00 - 10:00</option>
+                                        <option value="10:00">10:00 - 11:00</option>
+                                        <option value="11:00">11:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 14:00</option>
+                                        <option value="14:00">14:00 - 15:00</option>
+                                        <option value="15:00">15:00 - 16:00</option>
+                                        <option value="16:00">16:00 - 17:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                <label for="agree">Jag godkänner bekräftelse via SMS/email *</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large">Skicka bokningsförfrågan</button>
+                            <p class="form-note">* Obligatoriska fält. Du kommer att få ett bekräftelsemeddelande inom 2 timmar.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section alt">
+            <div class="container">
+                <h2>Vill du ringa istället?</h2>
+                <div class="quick-contact">
+                    <div>
+                        <h3>Telefon</h3>
+                        <p><a href="tel:+46706533535" class="phone-link">070-6533535</a></p>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:tiom.info@gmail.com">tiom.info@gmail.com</a></p>
+                    </div>
+                    <div>
+                        <h3>Öppettider</h3>
+                        <p>Efter överenskomättelse<br>
+Ring eller maila för att boka tid</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TIOM. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+    <script src="js/form-protect.js"></script>
+</body>
+</html>

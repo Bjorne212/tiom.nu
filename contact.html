@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakta TIOM - Vi svarar gärna på dina frågor">
+    <title>Kontakt - TIOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="img/TIOM Logo-Black.png" alt="TIOM Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Hem</a>
+                <a href="about.html">Om mig</a>
+                <a href="services.html">Tjänster</a>
+                <a href="webdev.html">Webbutveckling</a>
+                <a href="book.html" class="active nav-cta">Boka tid</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Kontakta Oss</h1>
+                <p>Vi är här för att hjälpa dig</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Kontaktinformation</h2>
+                        <div class="info-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:tiom.info@gmail.com">tiom.info@gmail.com</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+46706533535">070-6533535</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Adress</h3>
+                            <p>TIOM AB<br>
+                            Excelvägen 1<br>
+                            170 00 Stockholm<br>
+                            Sverige</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" action="https://formspree.io/f/xqegvgdb" method="POST" data-protected-form>
+                            <input type="hidden" name="_subject" value="Nytt kontaktmeddelande från tiom.nu">
+                            <input type="hidden" name="form_type" value="contact">
+                            <input type="hidden" name="started_at" value="">
+                            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <div class="form-group">
+                                <label for="name">Namn *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Ämne *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Meddelande *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Skicka</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TIOM. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+    <script src="js/form-protect.js"></script>
+</body>
+</html>
