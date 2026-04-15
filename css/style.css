@@ -31,6 +31,24 @@ body {
     flex-direction: column;
 }
 
+.skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -3rem;
+    z-index: 1000;
+    padding: 0.6rem 0.9rem;
+    background: #0f172a;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0.75rem;
+}
+
 .container {
     width: min(1120px, 92%);
     margin: 0 auto;
@@ -81,6 +99,7 @@ section.alt {
     align-items: center;
     height: auto;
     overflow: visible;
+    text-decoration: none;
 }
 
 .logo-link:hover {
