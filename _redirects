@@ -1,0 +1,7 @@
+# Canonical domain normalization
+https://www.tiom.nu/* https://tiom.nu/:splat 301
+http://www.tiom.nu/* https://tiom.nu/:splat 301
+http://tiom.nu/* https://tiom.nu/:splat 301
+
+# Canonical homepage path
+/index.html / 301
