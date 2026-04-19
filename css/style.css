@@ -497,6 +497,21 @@ section.alt {
     color: var(--text-light);
 }
 
+.service-card-highlight {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.price-intro {
+    margin-top: 1rem;
+}
+
+.features-grid-spaced {
+    margin-top: 2rem;
+}
+
 .service-stack {
     display: grid;
     gap: 1rem;
