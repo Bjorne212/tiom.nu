@@ -38,7 +38,7 @@
         "description": "IT-support och teknikhjälp i Linköping med omnejd för privatpersoner.",
         "areaServed": ["Linköping", "Linköping med omnejd", "Östergötland"],
         "image": "https://tiom.nu/img/og-image.png",
-        "logo": "https://tiom.nu/img/TIOM%20Logo-Black.png",
+        "logo": "https://tiom.nu/img/TIOM%20Black.svg",
         "serviceType": [
             "IT-support",
             "Teknikhjälp",
@@ -67,7 +67,7 @@
                 "name": "Kommer du på hembesök i Linköping?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ja, TIOM arbetar främst med hembesök i Linköping med omnejd så att hjälpen sker där problemet finns."
+                    "text": "Ja, jag arbetar främst med hembesök i Linköping med omnejd så att hjälpen sker där problemet finns."
                 }
             },
             {
@@ -93,35 +93,56 @@
 <body>
     <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
     <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="./" class="logo-link" aria-label="Till startsidan">
-                    <img src="img/TIOM Logo-Black.png" alt="TIOM Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="./" class="active">Hem</a>
-                <a href="about.html">Om mig</a>
-                <a href="services.html">Tjänster</a>
-                <a href="webdev.html">Webbutveckling</a>
+        <div class="nav-container">
+            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo"></a>
+            <nav class="nav-links" aria-label="Huvudmeny">
+                <a href="./" class="nav-link active">Hem</a>
+                <a href="about.html" class="nav-link">Om mig</a>
+                <a href="services.html" class="nav-link">Tjänster</a>
+                <a href="https://web.tiom.nu" class="nav-link">Webbutveckling</a>
                 <a href="book.html" class="nav-cta">Boka tid</a>
             </nav>
         </div>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">IT-support och teknikhjälp i Linköping med omnejd</h1>
-                <p class="hero-subtitle">Hjälp hemma hos dig med datorer, Wi-Fi, skrivare och annan teknik. Jag tar även uppdrag från andra orter efter överenskommelse.</p>
-                <a href="book.html" class="btn btn-primary">Boka tid nu</a>
+        <section class="hero bubble-zone">
+            <div class="hero-bubbles" aria-hidden="true">
+                <span class="hero-bubble hero-bubble-1"></span>
+                <span class="hero-bubble hero-bubble-2"></span>
+                <span class="hero-bubble hero-bubble-3"></span>
+            </div>
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">IT-support i Linköping</p>
+                    <h1 class="hero-title">Teknikhjälp hemma hos dig - snabbt, tydligt och personligt</h1>
+                    <p class="hero-subtitle">Jag hjälper privatpersoner med datorer, Wi-Fi, skrivare och ny teknik. Du får samma kontakt hela vägen och hjälp på plats där problemet faktiskt finns.</p>
+                    <div class="hero-actions">
+                        <a href="book.html" class="btn btn-primary btn-large">Boka tid nu</a>
+                        <a href="services.html" class="btn btn-secondary btn-large">Se vad jag hjälper med</a>
+                    </div>
+                    <div class="hero-trust" aria-label="Snabba nyckelfördelar">
+                        <div class="hero-trust-item"><span class="hero-trust-icon" aria-hidden="true">●</span><span>Hembesök i Linköping</span></div>
+                        <div class="hero-trust-item"><span class="hero-trust-icon" aria-hidden="true">●</span><span>500 kr/timme efter RUT</span></div>
+                        <div class="hero-trust-item"><span class="hero-trust-icon" aria-hidden="true">●</span><span>200+ genomförda hembesök</span></div>
+                    </div>
+                </div>
+                <aside class="hero-panel">
+                    <p class="hero-panel-label">Det här får du</p>
+                    <h2>En lugn genomgång och en lösning som fungerar i vardagen.</h2>
+                    <ul class="hero-panel-list">
+                        <li>Felsökning på plats hos dig</li>
+                        <li>Tydlig kommunikation utan tekniksnack</li>
+                        <li>Hjälp med dator, nätverk och smarta enheter</li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
         <section class="features">
             <div class="container">
-                <h2>Vad jag kan hjälpa med i Linköping och närliggande områden</h2>
-                <p>Behöver du teknikhjälp hemma i Linköping, som i Ryd, Lambohov, Tannefors, Berga, Valla, Tallboda eller Malmslätt? Jag hjälper gärna till på plats och förklarar det på ett sätt som är lätt att förstå.</p>
+                <h2>Vanliga problem jag löser hemma hos dig</h2>
+                <p>Från långsam dator och dåligt Wi-Fi till skrivare, ny mobil eller uppstart av ny teknik. Jag kommer hem till dig och gör det enkelt.</p>
                 <div class="features-grid">
                     <div class="feature-card">
                         <h3>💻 Datorn krånglar?</h3>
@@ -143,7 +164,7 @@
             <div class="container">
                 <h2>Varför välja TIOM?</h2>
                 <p>Det är lätt att känna sig frustrerad när tekniken inte fungerar som den ska, särskilt när det påverkar sådant som internetuppkoppling, mejl, skrivare eller mobilen. Många väntar för länge med att försöka lösa problemen själva, vilket ofta leder till mer stress.</p>
-                <p>Jag erbjuder teknikhjälp anpassad efter dina behov. Du får samma kontakt genom hela processen, med fokus på tydlig kommunikation och lösningar som passar din vardag. Jag kommer till dig hemma i Linköping med omnejd, så du slipper ta dig iväg och kan vara på plats när det krånglar. Målet är att göra tekniken enklare, tryggare och mer användbar i ditt hem.</p>
+                <p>Jag erbjuder teknikhjälp anpassad efter dina behov. Du får samma kontakt genom hela processen, tydlig kommunikation och lösningar som passar din vardag. Jag kommer hem till dig i Linköping med omnejd så att vi löser problemet där det faktiskt uppstår.</p>
                 <div class="service-card" style="margin-top: 1.5rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px;">
                     <p>Under de senaste åren har jag enbart arbetat med återkommande kunder och genomfört över 200+ hembesök. Det spelar ingen roll vad som är fel – vi löser det tillsammans på ett lugnt och personligt sätt. Teknik ska göra livet enklare, inte mer stressigt.</p>
                 </div>
@@ -184,8 +205,8 @@
 
         <section class="cta">
             <div class="container">
-                <h2>Är du frustrerad över något som inte fungerar?</h2>
-                <p>Oavsett om du har ett specifikt problem eller bara behöver någon att prata teknik med är jag här för att hjälpa. Kontakta mig för ett kostnadsfritt samtal om hur jag kan stödja dig, eller boka direkt om du redan vet vad som krånglar.</p>
+                <h2>Vill du få ordning på tekniken?</h2>
+                <p>Oavsett om du har ett specifikt problem eller bara vill ha någon som tar hand om tekniken är jag här för att hjälpa. Kontakta mig för ett kostnadsfritt samtal eller boka direkt om du redan vet vad som krånglar.</p>
                 <a href="book.html" class="btn btn-secondary">Skicka en bokningsförfrågan</a>
             </div>
         </section>
@@ -212,12 +233,6 @@
             </div>
         </section>
 
-        <section class="webdev-strip">
-            <div class="container">
-                <p>Jag bygger hemsidor för både privatpersoner och företag.</p>
-                <a href="webdev.html" class="btn btn-secondary">Se webbutveckling</a>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -227,5 +242,6 @@
             <p class="footer-contact">Hembesök i Linköping med omnejd.</p>
         </div>
     </footer>
+    <script src="js/site.js"></script>
 </body>
 </html>

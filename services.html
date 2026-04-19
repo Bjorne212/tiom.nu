@@ -28,7 +28,7 @@
         "description": "IT-support och teknikhjälp i Linköping med omnejd för privatpersoner.",
         "areaServed": ["Linköping", "Linköping med omnejd", "Östergötland"],
         "image": "https://tiom.nu/img/og-image.png",
-        "logo": "https://tiom.nu/img/TIOM%20Logo-Black.png",
+        "logo": "https://tiom.nu/img/TIOM%20Black.svg",
         "serviceType": [
             "IT-support",
             "Teknikhjälp",
@@ -51,78 +51,161 @@
 <body>
     <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
     <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="./" class="logo-link" aria-label="Till startsidan">
-                    <img src="img/TIOM Logo-Black.png" alt="TIOM Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="./">Hem</a>
-                <a href="about.html">Om mig</a>
-                <a href="services.html" class="active">Tjänster</a>
-                <a href="webdev.html">Webbutveckling</a>
+        <div class="nav-container">
+            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo"></a>
+            <nav class="nav-links" aria-label="Huvudmeny">
+                <a href="./" class="nav-link">Hem</a>
+                <a href="about.html" class="nav-link">Om mig</a>
+                <a href="services.html" class="nav-link is-active">Tjänster</a>
+                <a href="https://web.tiom.nu" class="nav-link">Webbutveckling</a>
                 <a href="book.html" class="nav-cta">Boka tid</a>
             </nav>
         </div>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="page-header">
+        <section class="page-header bubble-zone">
+            <div class="hero-bubbles" aria-hidden="true">
+                <span class="hero-bubble hero-bubble-1"></span>
+                <span class="hero-bubble hero-bubble-3"></span>
+                <span class="hero-bubble hero-bubble-5"></span>
+            </div>
             <div class="container">
-                   <h1>IT-support och teknikhjälp i Linköping med omnejd</h1>
-                   <p>Hjälp hemma hos dig med datorer, Wi-Fi, skrivare, säkerhet och smart teknik. Jag tar även uppdrag från andra orter efter överenskommelse.</p>
+                <p class="hero-eyebrow">Tjänster</p>
+                <h1>Det här kan jag hjälpa dig med hemma</h1>
+                <p>Målet är enkel och tydlig teknikhjälp utan krångel. Du beskriver vad som inte fungerar, jag förklarar vad vi gör och löser det steg för steg i lugnt tempo.</p>
             </div>
         </section>
 
-        <section class="features">
+        <section class="content-section alt">
             <div class="container">
-                <h2>Lokalt stöd för datorer och teknik i Linköping</h2>
-                <p>Jag hjälper privatpersoner i Linköping med omnejd med vanliga teknikproblem, från långsamma datorer och nätverksproblem till installation av program, skrivare och hemelektronik. Målet är enkel, snabb och personlig IT-support på plats, och jag tar även uppdrag från andra orter efter överenskommelse.</p>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>💻 Datorhjälp och felsökning</h3>
-                        <p>Datorn är långsam, kraschar eller vill inte starta? Jag felsöker och åtgärdar problemen hemma hos dig i Linköping med omnejd.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>🖥️ Programinstallation och uppdateringar</h3>
-                        <p>Installation, uppdatering och konfiguration av program, appar och operativsystem så att allt fungerar som det ska.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>🔒 Datorsäkerhet och backup</h3>
-                        <p>Hjälp med virusskydd, säkerhetsinställningar och backup så att dina filer och bilder blir tryggare.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>📶 Wi-Fi och nätverk</h3>
-                        <p>Installation och optimering av trådlöst nätverk för bättre täckning, stabilare uppkoppling och färre avbrott.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>📺 TV, surfplattor och smarta enheter</h3>
-                        <p>Installation, uppkoppling och felsökning av TV, streamingenheter, surfplattor och annan hemelektronik.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>🧭 Teknikråd och köpstöd</h3>
-                        <p>Råd om vilken utrustning du bör köpa, hur du kommer igång och vad som passar bäst för ditt behov.</p>
-                    </div>
+                <h2>Exempel på vad jag kan hjälpa dig med</h2>
+                <p class="section-lead">Nedan ser du några exempel på de tjänster jag erbjuder. Jag tar mig an de flesta problemen kopplat till all teknik man har i hemmet.</p>
+
+                <div class="service-stack">
+                    <article class="service-band">
+                        <div class="service-band-head">
+                            <span class="service-band-number">01</span>
+                            <div>
+                                <h3>Support när något krånglar</h3>
+                                <p>Jag hjälper dig hitta orsaken till problemet och förklarar vad som händer under tiden.</p>
+                            </div>
+                        </div>
+                        <div class="service-mini-grid">
+                            <div class="service-mini-card">
+                                <h4>Långsam dator</h4>
+                                <p>Rensning, uppdatering och genomgång av varför datorn känns seg.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Program som inte startar</h4>
+                                <p>Felmeddelanden, krascher och appar som beter sig konstigt.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Konton och inloggning</h4>
+                                <p>Hjälp med lösenord, konton och inställningar som behöver ordnas.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-band">
+                        <div class="service-band-head">
+                            <span class="service-band-number">02</span>
+                            <div>
+                                <h3>Internet, router och nätverk</h3>
+                                <p>För dig som vill få bättre täckning och mer stabil uppkoppling hemma.</p>
+                            </div>
+                        </div>
+                        <div class="service-mini-grid">
+                            <div class="service-mini-card">
+                                <h4>Installation av router</h4>
+                                <p>Jag kopplar in och sätter upp ny router på rätt sätt från början.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Förbättrad Wi-Fi-täckning</h4>
+                                <p>Jag går igenom placering och inställningar för bättre täckning i hemmet.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Fler enheter online</h4>
+                                <p>Dator, mobil, TV och skrivare får rätt anslutning och fungerar tillsammans.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-band">
+                        <div class="service-band-head">
+                            <span class="service-band-number">03</span>
+                            <div>
+                                <h3>Skrivare och annan utrustning</h3>
+                                <p>Jag hjälper till när du vill att ny teknik ska fungera utan onödigt krångel.</p>
+                            </div>
+                        </div>
+                        <div class="service-mini-grid">
+                            <div class="service-mini-card">
+                                <h4>Skrivare eller scanner</h4>
+                                <p>Installation, koppling mot nätverk och felsökning om utskriften inte fungerar.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>TV och streaming</h4>
+                                <p>Hjälp med uppkoppling, appar och vardaglig användning av TV-lösningar.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Surfplattor och smarta enheter</h4>
+                                <p>Genomgång av hur enheterna kopplas ihop och används på ett bra sätt.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-band">
+                        <div class="service-band-head">
+                            <span class="service-band-number">04</span>
+                            <div>
+                                <h3>Ny dator, säkerhet och backup</h3>
+                                <p>För en trygg start, bättre ordning och mindre risk att viktiga saker går förlorade.</p>
+                            </div>
+                        </div>
+                        <div class="service-mini-grid">
+                            <div class="service-mini-card">
+                                <h4>Ny dator</h4>
+                                <p>Grundinstallation, konton och viktiga inställningar så att du kommer igång direkt.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Backup</h4>
+                                <p>Backuper av bilder, dokument och filer som du vill skydda bättre.</p>
+                            </div>
+                            <div class="service-mini-card">
+                                <h4>Säkerhet</h4>
+                                <p>Virusskydd, säkerhetsinställningar och enkla råd för tryggare användning.</p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section class="content-section alt">
             <div class="container">
-                <h2>Varför välja TIOM för IT-support i Linköping?</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Lokalt och personligt</h3>
-                        <p>Du får hjälp av samma kontakt genom hela processen, med fokus på tydlig kommunikation och lösningar som passar din vardag.</p>
+                <h2>Så arbetar jag</h2>
+                <div class="service-process">
+                    <div class="service-process-step">
+                        <span class="service-process-number">1</span>
+                        <div>
+                            <h3>Du beskriver problemet</h3>
+                            <p>Det räcker med en enkel beskrivning av vad som inte fungerar.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Hjälp hemma hos dig</h3>
-                        <p>Jag kommer till dig i Linköping med omnejd, vilket är smidigt när datorn, nätverket eller skrivaren krånglar. Uppdrag från andra orter går också bra efter överenskommelse.</p>
+                    <div class="service-process-step">
+                        <span class="service-process-number">2</span>
+                        <div>
+                            <h3>Vi löser det steg för steg</h3>
+                            <p>Jag förklarar vad jag gör så du känner kontroll hela vägen.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Vanliga sökproblem lösta</h3>
-                        <p>Perfekt när du söker efter datorhjälp, teknikhjälp, IT-support, wifi-fix eller hjälp med ny dator i Linköping och närliggande områden.</p>
+                    <div class="service-process-step">
+                        <span class="service-process-number">3</span>
+                        <div>
+                            <h3>Du får råd efteråt</h3>
+                            <p>Vi avslutar med konkreta tips som gör det lättare framåt.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -131,36 +214,20 @@
         <section class="content-section">
             <div class="container">
                 <h2>Vanliga frågor</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Vilken typ av IT-support erbjuder du?</h3>
-                        <p>Jag hjälper med allt från datorfel, installationer och felsökning till Wi-Fi-problem, skrivare, säkerhet och uppdateringar. Tjänsten passar lika bra för äldre som vill känna sig tryggare med tekniken, som för barnfamiljer eller egenföretagare som behöver praktisk hjälp snabbt.</p>
+                <div class="service-faq">
+                    <div class="service-faq-item">
+                        <h3>Hur vet jag vilken tjänst jag behöver?</h3>
+                        <p>Du behöver inte välja exakt i förväg. Beskriv bara problemet så föreslår jag rätt upplägg.</p>
                     </div>
-                    <div class="service-card">
-                        <h3>Kommer du ut till kunder i Linköping?</h3>
-                        <p>Ja, fokus ligger på hembesök i Linköping och omnejd så att du får snabb och praktisk support där problemet finns. Jag tar även uppdrag från andra orter efter överenskommelse, så osäker på om jag kan hjälpa där du bor? Hör av dig – jag är flexibel!</p>
+                    <div class="service-faq-item">
+                        <h3>Kan flera saker fixas vid samma besök?</h3>
+                        <p>Ja, ofta hinner vi lösa flera saker vid samma tillfälle, till exempel skrivare, router och datorproblem.</p>
                     </div>
-                    <div class="service-card">
-                        <h3>Behöver jag veta exakt vad som är fel i förväg?</h3>
-                        <p>Nej, det räcker att du berättar ungefär vad som inte fungerar. Det kan vara "datorn är väldigt trög", "Wi-Fi:n är dålig" eller "jag vet inte hur jag kopplar surfplattan". Vi löser det tillsammans när jag är på plats.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Kan jag få hjälp med flera saker under ett besök?</h3>
-                        <p>Absolut! Om du har flera frågor eller problem kan vi lösa flera saker under samma besök. Många av mina kunder berättar om nya behov när jag väl är hemma hos dem.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Kan du hjälpa om jag köpt ny dator eller ny skrivare?</h3>
-                        <p>Ja, jag kan installera, koppla upp och konfigurera ny utrustning så att allt fungerar direkt från start. Jag kan även ge råd om vilken utrustning som passar din situation innan du köper något.</p>
+                    <div class="service-faq-item">
+                        <h3>Kommer du utanför Linköping?</h3>
+                        <p>Ja, fokus är Linköping med omnejd men jag kan även ta uppdrag på andra orter efter överenskommelse.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="container">
-                   <h2>Behöver du teknikhjälp i Linköping?</h2>
-                   <p>Boka en tid så får du personlig IT-support för datorer, Wi-Fi, skrivare och annan teknik hemma hos dig i Linköping med omnejd eller på annan ort efter överenskommelse.</p>
-                   <a href="book.html" class="btn btn-secondary">Boka en tid</a>
             </div>
         </section>
     </main>
@@ -172,5 +239,6 @@
             <p class="footer-contact">Hembesök i Linköping med omnejd.</p>
         </div>
     </footer>
+    <script src="js/site.js"></script>
 </body>
 </html>

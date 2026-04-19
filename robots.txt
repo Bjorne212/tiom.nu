@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+# Legacy page redirects are handled server-side.
+
 Sitemap: https://tiom.nu/sitemap.xml

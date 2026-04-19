@@ -32,31 +32,25 @@
 <body>
     <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
     <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="./" class="logo-link" aria-label="Till startsidan">
-                    <img src="img/TIOM Logo-Black.png" alt="TIOM Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="./">Hem</a>
-                <a href="about.html" class="active">Om mig</a>
-                <a href="services.html">Tjänster</a>
-                <a href="webdev.html">Webbutveckling</a>
+        <div class="nav-container">
+            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo"></a>
+            <nav class="nav-links" aria-label="Huvudmeny">
+                <a href="./" class="nav-link">Hem</a>
+                <a href="about.html" class="nav-link is-active">Om mig</a>
+                <a href="services.html" class="nav-link">Tjänster</a>
+                <a href="https://web.tiom.nu" class="nav-link">Webbutveckling</a>
                 <a href="book.html" class="nav-cta">Boka tid</a>
             </nav>
         </div>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="page-header">
-            <div class="container">
-                <h1>Om TIOM</h1>
-                <p>Din lokala support inom IT och hemelektronik</p>
+        <section class="content-section bubble-zone">
+            <div class="hero-bubbles" aria-hidden="true">
+                <span class="hero-bubble hero-bubble-1"></span>
+                <span class="hero-bubble hero-bubble-2"></span>
+                <span class="hero-bubble hero-bubble-4"></span>
             </div>
-        </section>
-
-        <section class="content-section">
             <div class="container about-intro">
                 <img src="img/profilbild.jpg" alt="Theodor - TIOM" class="profile-image" loading="lazy" decoding="async">
                 <div class="about-intro-text">
@@ -77,7 +71,7 @@
 
         <section class="content-section alt">
             <div class="container">
-                   <h2>Vad kan jag hjälpa till med?</h2>
+                  <h2>Vad kan jag hjälpa till med?</h2>
                 <ul class="values-list">
                        <li><strong>Datorproblem:</strong> Allt från felsökning till installation av program och uppdateringar</li>
                        <li><strong>Internet och WiFi:</strong> Dålig täckning hemma? Jag kan optimera det så det fungerar bra</li>
@@ -89,8 +83,9 @@
 
         <section class="cta">
             <div class="container">
-                   <h2>Har du en teknikfråga som krånglar?</h2>
-                   <a href="book.html" class="btn btn-secondary">Skicka ett meddelande så hör jag av mig</a>
+            <h2>Har du en teknikfråga som krånglar?</h2>
+            <p>Skicka en bokningsförfrågan så återkommer jag snabbt med förslag på nästa steg.</p>
+            <a href="book.html" class="btn btn-secondary">Skicka ett meddelande</a>
             </div>
         </section>
     </main>
@@ -102,5 +97,6 @@
             <p class="footer-contact">Hembesök i Linköping med omnejd.</p>
         </div>
     </footer>
+    <script src="js/site.js"></script>
 </body>
 </html>

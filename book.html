@@ -32,39 +32,36 @@
 <body>
     <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
     <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="./" class="logo-link" aria-label="Till startsidan">
-                    <img src="img/TIOM Logo-Black.png" alt="TIOM Logo" class="logo-img" loading="eager" fetchpriority="high" decoding="async">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="./">Hem</a>
-                <a href="about.html">Om mig</a>
-                <a href="services.html">Tjänster</a>
-                <a href="webdev.html">Webbutveckling</a>
-                <a href="book.html" class="active nav-cta">Boka tid</a>
+        <div class="nav-container">
+            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo"></a>
+            <nav class="nav-links" aria-label="Huvudmeny">
+                <a href="./" class="nav-link">Hem</a>
+                <a href="about.html" class="nav-link">Om mig</a>
+                <a href="services.html" class="nav-link">Tjänster</a>
+                <a href="https://web.tiom.nu" class="nav-link">Webbutveckling</a>
+                <a href="book.html" class="nav-cta">Boka tid</a>
             </nav>
         </div>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="page-header">
-            <div class="container">
-                   <h1>Boka IT-support</h1>
-                   <p>Fyll i dina uppgifter om du behöver hjälp i Linköping med omnejd eller från annan ort efter överenskommelse</p>
+        <section class="page-header bubble-zone">
+            <div class="hero-bubbles" aria-hidden="true">
+                <span class="hero-bubble hero-bubble-2"></span>
+                <span class="hero-bubble hero-bubble-4"></span>
+                <span class="hero-bubble hero-bubble-6"></span>
             </div>
-        </section>
-
-        <section class="booking-intro" style="background: #f9f9f9; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
             <div class="container">
-                <h2>Enkelt att boka hjälp</h2>
-                <p>Det spelar ingen roll vad som krånglar – fyll bara i formuläret nedan så hör jag av mig så fort som möjligt. För uppdrag i Linköping med omnejd kan jag oftast komma inom några dagar. Jag bekräftar besöket via telefon eller email innan jag kommer ut.</p>
+                <p class="hero-eyebrow">Boka hjälp</p>
+                <h1>Enkelt att boka teknikhjälp hemma hos dig</h1>
+                <p>Fyll i formuläret så återkommer jag snabbt med bekräftelse. För uppdrag i Linköping med omnejd finns ofta tider inom några dagar.</p>
             </div>
         </section>
 
         <section class="booking-section">
             <div class="container">
+                <h2>Skicka bokningsförfrågan</h2>
+                <p class="section-lead">Berätta kort vad som krånglar och när du vill ha hjälp, så återkommer jag med ett tydligt upplägg.</p>
                 <div class="booking-content">
                     <div class="booking-info">
                         <h2>Så här fungerar det</h2>
@@ -79,15 +76,11 @@
                         <p class="price-info">
                             <strong>Hembesök (efter RUT):</strong> 500 kr/timme<br>
                             <strong>Minimitid:</strong> 1 timme<br>
-                            <strong>Support på distans:</strong> Pris på förfrågan<br>
-                            <strong>Webbutveckling:</strong> Se webbutveckling-sidan
-                        </p>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            <strong>OBS:</strong> RUT-avdrag kan göra att priset blir lägre för dig. Efter RUT utgiftstak är priset ofta runt 250–300 kr/timme för dig personligen. Det är du själv som ansöker om RUT-avdraget när du betalar din deklaration.
+                            <strong>Support på distans:</strong> Pris på förfrågan
                         </p>
                     </div>
 
-                    <div class="booking-form-wrapper">
+                    <div class="booking-form-wrapper" id="booking-form">
                         <form class="booking-form" action="https://formspree.io/f/xqegvgdb" method="POST" data-protected-form>
                             <input type="hidden" name="_subject" value="Ny bokningsförfrågan från tiom.nu">
                             <input type="hidden" name="form_type" value="booking">
@@ -161,7 +154,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-large">Skicka bokningsförfrågan</button>
-                            <p class="form-note">* Obligatoriska fält. Du kommer att få ett bekräftelsemeddelande inom 2 timmar.</p>
+                            <p class="form-note">* Obligatoriska fält.</p>
                         </form>
                     </div>
                 </div>
@@ -197,6 +190,7 @@ Ring eller maila för att boka tid</p>
             <p class="footer-contact">Hembesök i Linköping med omnejd.</p>
         </div>
     </footer>
+    <script src="js/site.js"></script>
     <script src="js/form-protect.js"></script>
 </body>
 </html>

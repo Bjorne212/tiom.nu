@@ -1,2 +1,8 @@
 # Canonical homepage path
 /index.html / 301
+
+# Removed pages
+/contact /book.html 301
+/contact.html /book.html 301
+/webdev /https://web.tiom.nu 301
+/webdev.html /https://web.tiom.nu 301
