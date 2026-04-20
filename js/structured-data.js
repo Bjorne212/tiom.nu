@@ -11,7 +11,7 @@ const localBusinessSchema = {
     "name": "TIOM",
     "description": "IT-support och teknikhjälp i Linköping med omnejd för privatpersoner.",
     "areaServed": ["Linköping", "Linköping med omnejd", "Östergötland"],
-    "image": "https://tiom.nu/img/og-image.png",
+    "image": "https://tiom.nu/img/TIOM%20OG%20Banner.svg",
     "logo": "https://tiom.nu/img/TIOM%20Black.svg",
     "serviceType": [
         "IT-support",
