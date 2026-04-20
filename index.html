@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TIOM">
     <meta property="og:title" content="Teknikhjälp i Linköping med hembesök och support | TIOM">
-    <meta property="og:description" content="IT-support och teknikhjälp i Linköping med hembesök. TIOM hjälper med datorer, Wi-Fi, skrivare, mobil, backup och uppstart, och tar även uppdrag från andra orter efter överenskommelse.">
+    <meta property="og:description" content="IT-support och teknikhjälp i Linköping med hembesök. TIOM hjälper med datorer, Wi-Fi, skrivare, mobil, backup och uppstart.">
     <meta property="og:url" content="https://tiom.nu/">
     <meta property="og:image" content="https://tiom.nu/img/og-image.png">
     <meta property="og:image:alt" content="TIOM - IT-support och teknikhjälp i Linköping med omnejd">
@@ -18,83 +18,30 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Teknikhjälp i Linköping med hembesök och support | TIOM">
-    <meta name="twitter:description" content="IT-support och teknikhjälp i Linköping med hembesök. TIOM hjälper med datorer, Wi-Fi, skrivare, mobil, backup och uppstart, och tar även uppdrag från andra orter efter överenskommelse.">
+    <meta name="twitter:description" content="IT-support och teknikhjälp i Linköping med hembesök. TIOM hjälper med datorer, Wi-Fi, skrivare, mobil, backup och uppstart.">
     <meta name="twitter:image" content="https://tiom.nu/img/og-image.png">
+    <link rel="preconnect" href="https://web.tiom.nu" crossorigin>
+    <link rel="dns-prefetch" href="//web.tiom.nu">
+    <link rel="preconnect" href="https://formspree.io" crossorigin>
+    <link rel="dns-prefetch" href="//formspree.io">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="img/TIOM%20Favicon%2064x64.png">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "TIOM",
-        "url": "https://tiom.nu/"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "TIOM",
-        "description": "IT-support och teknikhjälp i Linköping med omnejd för privatpersoner.",
-        "areaServed": ["Linköping", "Linköping med omnejd", "Östergötland"],
-        "image": "https://tiom.nu/img/og-image.png",
-        "logo": "https://tiom.nu/img/TIOM%20Black.svg",
-        "serviceType": [
-            "IT-support",
-            "Teknikhjälp",
-            "Datorhjälp",
-            "Wi-Fi och nätverk",
-            "Säkerhet och installation"
-        ],
-        "url": "https://tiom.nu/"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Vad hjälper TIOM med?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "TIOM hjälper med datorer, Wi-Fi, skrivare, mobil, backup, lösenord, uppstart av ny teknik och generell teknikhjälp hemma."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Kommer du på hembesök i Linköping?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, jag arbetar främst med hembesök i Linköping med omnejd så att hjälpen sker där problemet finns."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hjälper du med flera problem under samma besök?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, om du har flera teknikproblem kan vi ofta lösa flera saker under samma besök."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Tar du uppdrag från andra orter?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, TIOM tar även uppdrag från andra orter efter överenskommelse."
-                }
-            }
-        ]
-    }
-    </script>
+    <script src="js/structured-data.js" defer></script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
+    <div class="dev-popup" id="dev-popup" role="dialog" aria-modal="true" aria-labelledby="dev-popup-title" aria-describedby="dev-popup-desc" aria-hidden="true" hidden>
+        <div class="dev-popup-overlay" data-action="close-popup"></div>
+        <div class="dev-popup-panel">
+            <p class="dev-popup-badge">Under utveckling</p>
+            <h2 id="dev-popup-title">Sidan utvecklas fortfarande</h2>
+            <p id="dev-popup-desc">Du kan utforska innehållet, men vissa delar kan ändras medan sajten färdigställs.</p>
+            <button type="button" class="btn btn-primary" data-action="close-popup">Jag förstår</button>
+        </div>
+    </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="navbar">
         <div class="nav-container">
-            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo"></a>
+            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo" loading="lazy" decoding="async"></a>
             <nav class="nav-links" aria-label="Huvudmeny">
                 <a href="./" class="nav-link active">Hem</a>
                 <a href="about.html" class="nav-link">Om mig</a>
