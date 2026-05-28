@@ -26,9 +26,6 @@ Disallow: /
 User-agent: omgili
 Disallow: /
 
-User-agent: anthropic-ai
-Disallow: /
-
 User-agent: cohere-ai
 Disallow: /
 
