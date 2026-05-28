@@ -1,6 +1,70 @@
-User-agent: *
+# TIOM - robots.txt
+# Tillåt sökmotorer och AI-sökmotorer. Blockera renodlade träningsbottar.
+
+# --- AI-träningsbottar: blockerade ---
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+# --- AI-sökmotorer / retrieval: tillåtna ---
+User-agent: OAI-SearchBot
 Allow: /
 
-# Legacy page redirects are handled server-side.
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- Standard: tillåt alla sökmotorer (Googlebot m.fl.) ---
+User-agent: *
+Allow: /
 
 Sitemap: https://tiom.nu/sitemap.xml

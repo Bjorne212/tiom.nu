@@ -1,4 +1,11 @@
-const SITE_URL = "https://tiom.nu/";
+#!/usr/bin/env node
+// One-shot tool: replaces the deferred structured-data.js script tag with
+// inline JSON-LD blocks in every HTML file under the project root.
+
+const fs = require("fs");
+const path = require("path");
+
+const ROOT = path.resolve(__dirname, "..");
 const BUSINESS_ID = "https://tiom.nu/#business";
 
 const webSiteSchema = {
@@ -13,7 +20,7 @@ const webSiteSchema = {
 
 const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": BUSINESS_ID,
     "name": "TIOM",
     "description": "IT-support och teknikhjälp i Linköping med hembesök hos privatpersoner. Hjälp med datorer, Wi-Fi, skrivare, ny dator, backup och säkerhet.",
@@ -255,110 +262,112 @@ function breadcrumb(items) {
     };
 }
 
-const structuredDataByPath = {
-    "/": [webSiteSchema, localBusinessSchema, faqSchema],
-    "/index.html": [webSiteSchema, localBusinessSchema, faqSchema],
-    "/services.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+// Map file path (relative to ROOT) -> array of schema objects.
+const pageMap = {
+    "index.html": [webSiteSchema, localBusinessSchema, faqSchema],
+    "services.html": [webSiteSchema, localBusinessSchema, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Tjänster", url: "https://tiom.nu/services.html" }
     ])],
-    "/about.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+    "about.html": [webSiteSchema, localBusinessSchema, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Om mig", url: "https://tiom.nu/about.html" }
     ])],
-    "/book.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+    "book.html": [webSiteSchema, localBusinessSchema, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Boka tid", url: "https://tiom.nu/book.html" }
     ])],
-    "/datorhjalp-linkoping.html": [webSiteSchema, localBusinessSchema, datorhjalpService, breadcrumb([
+    "datorhjalp-linkoping.html": [webSiteSchema, localBusinessSchema, datorhjalpService, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Tjänster", url: "https://tiom.nu/services.html" },
         { name: "Datorhjälp i Linköping", url: "https://tiom.nu/datorhjalp-linkoping.html" }
     ])],
-    "/wifi-router-hjalp-linkoping.html": [webSiteSchema, localBusinessSchema, wifiService, breadcrumb([
+    "wifi-router-hjalp-linkoping.html": [webSiteSchema, localBusinessSchema, wifiService, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Tjänster", url: "https://tiom.nu/services.html" },
         { name: "Wi-Fi och routerhjälp i Linköping", url: "https://tiom.nu/wifi-router-hjalp-linkoping.html" }
     ])],
-    "/skrivare-tv-installation-linkoping.html": [webSiteSchema, localBusinessSchema, skrivareTvService, breadcrumb([
+    "skrivare-tv-installation-linkoping.html": [webSiteSchema, localBusinessSchema, skrivareTvService, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Tjänster", url: "https://tiom.nu/services.html" },
         { name: "Installation av skrivare och TV i Linköping", url: "https://tiom.nu/skrivare-tv-installation-linkoping.html" }
     ])],
-    "/ny-dator-backup-sakerhet-linkoping.html": [webSiteSchema, localBusinessSchema, sakerhetBackupService, breadcrumb([
+    "ny-dator-backup-sakerhet-linkoping.html": [webSiteSchema, localBusinessSchema, sakerhetBackupService, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Tjänster", url: "https://tiom.nu/services.html" },
         { name: "Ny dator, backup och säkerhet i Linköping", url: "https://tiom.nu/ny-dator-backup-sakerhet-linkoping.html" }
     ])],
-    "/guider": [webSiteSchema, localBusinessSchema, blogSchema, breadcrumb([
+    "guider/index.html": [webSiteSchema, localBusinessSchema, blogSchema, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Guider", url: "https://tiom.nu/guider/" }
     ])],
-    "/guider/": [webSiteSchema, localBusinessSchema, blogSchema, breadcrumb([
-        { name: "Hem", url: "https://tiom.nu/" },
-        { name: "Guider", url: "https://tiom.nu/guider/" }
-    ])],
-    "/guider/index.html": [webSiteSchema, localBusinessSchema, blogSchema, breadcrumb([
-        { name: "Hem", url: "https://tiom.nu/" },
-        { name: "Guider", url: "https://tiom.nu/guider/" }
-    ])],
-    "/guider/varfor-blir-datorn-langsam.html": [webSiteSchema, localBusinessSchema, langsamDatorArticle, breadcrumb([
+    "guider/varfor-blir-datorn-langsam.html": [webSiteSchema, localBusinessSchema, langsamDatorArticle, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Guider", url: "https://tiom.nu/guider/" },
         { name: "Varför blir datorn långsam?", url: "https://tiom.nu/guider/varfor-blir-datorn-langsam.html" }
     ])],
-    "/guider/battre-wifi-tackning-hemma.html": [webSiteSchema, localBusinessSchema, wifiTackningArticle, breadcrumb([
+    "guider/battre-wifi-tackning-hemma.html": [webSiteSchema, localBusinessSchema, wifiTackningArticle, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Guider", url: "https://tiom.nu/guider/" },
         { name: "Bättre Wi-Fi-täckning hemma", url: "https://tiom.nu/guider/battre-wifi-tackning-hemma.html" }
     ])],
-    "/guider/backup-av-bilder-och-dokument.html": [webSiteSchema, localBusinessSchema, backupBilderArticle, breadcrumb([
+    "guider/backup-av-bilder-och-dokument.html": [webSiteSchema, localBusinessSchema, backupBilderArticle, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Guider", url: "https://tiom.nu/guider/" },
         { name: "Backup av bilder och dokument", url: "https://tiom.nu/guider/backup-av-bilder-och-dokument.html" }
     ])],
-    "/guider/valja-tv-vm-2026.html": [webSiteSchema, localBusinessSchema, tvVm2026Article, breadcrumb([
+    "guider/valja-tv-vm-2026.html": [webSiteSchema, localBusinessSchema, tvVm2026Article, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Guider", url: "https://tiom.nu/guider/" },
         { name: "Välja TV inför fotbolls-VM 2026", url: "https://tiom.nu/guider/valja-tv-vm-2026.html" }
     ])],
-    "/villkor.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+    "villkor.html": [webSiteSchema, localBusinessSchema, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Villkor", url: "https://tiom.nu/villkor.html" }
     ])],
-    "/integritetspolicy.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+    "integritetspolicy.html": [webSiteSchema, localBusinessSchema, breadcrumb([
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Integritetspolicy", url: "https://tiom.nu/integritetspolicy.html" }
     ])]
 };
 
-function normalizePath(pathname) {
-    if (!pathname || pathname === "/") {
-        return "/";
+// Marker comments that wrap the injected block so re-runs can replace cleanly.
+const START = "    <!-- structured-data:start -->";
+const END = "    <!-- structured-data:end -->";
+
+function buildBlock(schemas) {
+    const lines = [START];
+    for (const schema of schemas) {
+        lines.push('    <script type="application/ld+json">' + JSON.stringify(schema) + "</script>");
     }
-    return pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+    lines.push(END);
+    return lines.join("\n");
 }
 
-function injectStructuredData() {
-    const path = normalizePath(window.location.pathname);
-    const entries = structuredDataByPath[path] || structuredDataByPath["/"];
+// Regex pieces used to remove the old structured-data.js loader and any
+// previously injected block, so the script is idempotent.
+const LOADER_RE = /\s*<script src="[^"]*structured-data\.js"[^>]*><\/script>/;
+const INJECTED_RE = /\n?\s*<!-- structured-data:start -->[\s\S]*?<!-- structured-data:end -->/;
 
-    if (!entries || entries.length === 0) {
-        return;
+let updated = 0;
+
+for (const [rel, schemas] of Object.entries(pageMap)) {
+    const filePath = path.join(ROOT, rel);
+    let html = fs.readFileSync(filePath, "utf8");
+
+    html = html.replace(LOADER_RE, "");
+    html = html.replace(INJECTED_RE, "");
+
+    const block = "\n" + buildBlock(schemas);
+    // Inject right before </head>.
+    if (!html.includes("</head>")) {
+        throw new Error("No </head> in " + rel);
     }
+    html = html.replace("</head>", block + "\n</head>");
 
-    const head = document.head || document.getElementsByTagName("head")[0];
-
-    entries.forEach((schema) => {
-        const script = document.createElement("script");
-        script.type = "application/ld+json";
-        script.text = JSON.stringify(schema);
-        head.appendChild(script);
-    });
+    fs.writeFileSync(filePath, html);
+    updated++;
+    console.log("Updated " + rel);
 }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", injectStructuredData);
-} else {
-    injectStructuredData();
-}
+console.log("Done. " + updated + " files updated.");

@@ -86,34 +86,3 @@
     window.addEventListener('resize', updateNavbarState);
 })();
 
-// --- Under utveckling popup ---
-document.addEventListener('DOMContentLoaded', function () {
-    var devPopup = document.getElementById('dev-popup');
-    if (devPopup) {
-        var closePopup = function () {
-            devPopup.setAttribute('aria-hidden', 'true');
-            devPopup.hidden = true;
-            document.body.classList.remove('popup-open');
-        };
-
-        var openPopup = function () {
-            devPopup.hidden = false;
-            requestAnimationFrame(function () {
-                devPopup.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('popup-open');
-            });
-        };
-
-        openPopup();
-
-        devPopup.querySelectorAll('[data-action="close-popup"]').forEach(function (button) {
-            button.addEventListener('click', closePopup);
-        });
-
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && devPopup.getAttribute('aria-hidden') === 'false') {
-                closePopup();
-            }
-        });
-    }
-});

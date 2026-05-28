@@ -26,29 +26,25 @@
     <link rel="dns-prefetch" href="//formspree.io">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="img/TIOM%20Favicon%2064x64.png">
-    <script src="js/structured-data.js" defer></script>
+
+    <!-- structured-data:start -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://tiom.nu/#website","name":"TIOM","url":"https://tiom.nu/","inLanguage":"sv-SE","publisher":{"@id":"https://tiom.nu/#business"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","ProfessionalService"],"@id":"https://tiom.nu/#business","name":"TIOM","description":"IT-support och teknikhjälp i Linköping med hembesök hos privatpersoner. Hjälp med datorer, Wi-Fi, skrivare, ny dator, backup och säkerhet.","url":"https://tiom.nu/","telephone":"+46706533535","email":"tiom.info@gmail.com","priceRange":"500 SEK/timme efter RUT-avdrag","image":"https://tiom.nu/img/TIOM%20OG%20Banner.svg","logo":"https://tiom.nu/img/TIOM%20Black.svg","address":{"@type":"PostalAddress","addressLocality":"Linköping","addressRegion":"Östergötland","addressCountry":"SE"},"geo":{"@type":"GeoCoordinates","latitude":58.4108,"longitude":15.6214},"areaServed":[{"@type":"City","name":"Linköping"},{"@type":"AdministrativeArea","name":"Östergötland"}],"serviceArea":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":58.4108,"longitude":15.6214},"geoRadius":"40000"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"15:00"}],"serviceType":["IT-support","Teknikhjälp","Datorhjälp","Wi-Fi och nätverksinstallation","Skrivarinstallation","Säkerhet och backup","Uppstart av ny dator"],"knowsLanguage":["sv","en"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Vad hjälper TIOM med?","acceptedAnswer":{"@type":"Answer","text":"TIOM hjälper med datorer, Wi-Fi, skrivare, mobil, backup, lösenord, uppstart av ny teknik och generell teknikhjälp hemma."}},{"@type":"Question","name":"Kommer du på hembesök i Linköping?","acceptedAnswer":{"@type":"Answer","text":"Ja, jag arbetar främst med hembesök i Linköping med omnejd så att hjälpen sker där problemet finns."}},{"@type":"Question","name":"Hjälper du med flera problem under samma besök?","acceptedAnswer":{"@type":"Answer","text":"Ja, om du har flera teknikproblem kan vi ofta lösa flera saker under samma besök."}},{"@type":"Question","name":"Tar du uppdrag från andra orter?","acceptedAnswer":{"@type":"Answer","text":"Ja, TIOM tar även uppdrag från andra orter efter överenskommelse."}},{"@type":"Question","name":"Vad kostar ett hembesök?","acceptedAnswer":{"@type":"Answer","text":"500 kr per timme efter RUT-avdrag för privatpersoner i Linköping med omnejd."}}]}</script>
+    <!-- structured-data:end -->
 </head>
 <body>
-    <div class="dev-popup" id="dev-popup" role="dialog" aria-modal="true" aria-labelledby="dev-popup-title" aria-describedby="dev-popup-desc" aria-hidden="true" hidden>
-        <div class="dev-popup-overlay" data-action="close-popup"></div>
-        <div class="dev-popup-panel">
-            <p class="dev-popup-badge">Under utveckling</p>
-            <h2 id="dev-popup-title">Sidan utvecklas fortfarande</h2>
-            <p id="dev-popup-desc">Du kan utforska innehållet, men vissa delar kan ändras medan sajten färdigställs.</p>
-            <button type="button" class="btn btn-primary" data-action="close-popup">Jag förstår</button>
-        </div>
-    </div>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="navbar">
         <div class="nav-container">
             <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM - IT-support i Linköping" width="150" height="40" decoding="async" fetchpriority="high"></a>
             <nav class="nav-links" aria-label="Huvudmeny">
                 <a href="./" class="nav-link active">Hem</a>
-                <a href="about.html" class="nav-link">Om mig</a>
-                <a href="services.html" class="nav-link">Tjänster</a>
+                <a href="about" class="nav-link">Om mig</a>
+                <a href="services" class="nav-link">Tjänster</a>
                 <a href="guider/" class="nav-link">Guider</a>
                 <a href="https://web.tiom.nu" class="nav-link">Webbutveckling</a>
-                <a href="book.html" class="nav-cta">Boka tid</a>
+                <a href="book" class="nav-cta">Boka tid</a>
             </nav>
         </div>
     </header>
@@ -66,8 +62,8 @@
                     <h1 class="hero-title">Teknikhjälp hemma hos dig - snabbt, tydligt och personligt</h1>
                     <p class="hero-subtitle">Jag hjälper privatpersoner med datorer, Wi-Fi, skrivare och ny teknik. Du får samma kontakt hela vägen och hjälp på plats där problemet faktiskt finns.</p>
                     <div class="hero-actions">
-                        <a href="book.html" class="btn btn-primary btn-large">Boka tid nu</a>
-                        <a href="services.html" class="btn btn-secondary btn-large">Se vad jag hjälper med</a>
+                        <a href="book" class="btn btn-primary btn-large">Boka tid nu</a>
+                        <a href="services" class="btn btn-secondary btn-large">Se vad jag hjälper med</a>
                     </div>
                     <div class="hero-trust" aria-label="Snabba nyckelfördelar">
                         <div class="hero-trust-item"><span class="hero-trust-icon" aria-hidden="true">●</span><span>Hembesök i Linköping</span></div>
@@ -155,7 +151,7 @@
             <div class="container">
                 <h2>Vill du få ordning på tekniken?</h2>
                 <p>Oavsett om du har ett specifikt problem eller bara vill ha någon som tar hand om tekniken är jag här för att hjälpa. Kontakta mig för ett kostnadsfritt samtal eller boka direkt om du redan vet vad som krånglar.</p>
-                <a href="book.html" class="btn btn-secondary">Skicka en bokningsförfrågan</a>
+                <a href="book" class="btn btn-secondary">Skicka en bokningsförfrågan</a>
             </div>
         </section>
 
@@ -195,10 +191,10 @@
                 <h2 class="footer-heading">Sidor</h2>
                 <ul class="footer-list">
                     <li><a href="./">Hem</a></li>
-                    <li><a href="about.html">Om mig</a></li>
-                    <li><a href="services.html">Tjänster</a></li>
+                    <li><a href="about">Om mig</a></li>
+                    <li><a href="services">Tjänster</a></li>
                     <li><a href="guider/">Guider</a></li>
-                    <li><a href="book.html">Boka tid</a></li>
+                    <li><a href="book">Boka tid</a></li>
                     <li><a href="https://web.tiom.nu">Webbutveckling</a></li>
                 </ul>
             </nav>
@@ -212,15 +208,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container footer-bottom-inner">
-                <p>&copy; 2026 TIOM. Alla rättigheter förbehållna.</p>
+            <div class="container footer-bottom-inner"><p class="footer-meta">TIOM · Enskild firma med F-skatt · Berättigad för RUT-avdrag · Org.nr anges på faktura · Hembesök i Linköping med omnejd</p><p>&copy; 2026 TIOM. Alla rättigheter förbehållna.</p>
                 <ul class="footer-legal">
-                    <li><a href="villkor.html">Villkor</a></li>
-                    <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+                    <li><a href="villkor">Villkor</a></li>
+                    <li><a href="integritetspolicy">Integritetspolicy</a></li>
                 </ul>
             </div>
         </div>
     </footer>
-    <script src="js/site.js"></script>
+    <script src="js/site.js" defer></script>
 </body>
 </html>
