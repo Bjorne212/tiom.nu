@@ -31,11 +31,12 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="navbar">
         <div class="nav-container">
-            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM Logo" loading="lazy" decoding="async"></a>
+            <a href="./" class="nav-logo" aria-label="Till startsidan"><img src="img/TIOM Black.svg" alt="TIOM - IT-support i Linköping" width="150" height="40" decoding="async" fetchpriority="high"></a>
             <nav class="nav-links" aria-label="Huvudmeny">
                 <a href="./" class="nav-link">Hem</a>
                 <a href="about.html" class="nav-link">Om mig</a>
                 <a href="services.html" class="nav-link">Tjänster</a>
+                <a href="guider/" class="nav-link">Guider</a>
                 <a href="https://web.tiom.nu" class="nav-link">Webbutveckling</a>
                 <a href="book.html" class="nav-cta">Boka tid</a>
             </nav>
@@ -181,11 +182,42 @@ Ring eller maila för att boka tid</p>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 TIOM. Alla rättigheter förbehållna.</p>
-            <p class="footer-contact">Email: <a href="mailto:tiom.info@gmail.com">tiom.info@gmail.com</a> · Telefon: <a href="tel:+46706533535">070-6533535</a></p>
-            <p class="footer-contact">Hembesök i Linköping med omnejd.</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="./" class="footer-logo" aria-label="TIOM - Hem">
+                    <img src="img/TIOM Black.svg" alt="TIOM" loading="lazy" decoding="async">
+                </a>
+                <p class="footer-tagline">Personlig teknikhjälp på plats hemma hos dig. IT-support, felsökning och uppstart för privatpersoner i Linköping med omnejd.</p>
+            </div>
+            <nav class="footer-col" aria-label="Sidlänkar">
+                <h2 class="footer-heading">Sidor</h2>
+                <ul class="footer-list">
+                    <li><a href="./">Hem</a></li>
+                    <li><a href="about.html">Om mig</a></li>
+                    <li><a href="services.html">Tjänster</a></li>
+                    <li><a href="guider/">Guider</a></li>
+                    <li><a href="book.html">Boka tid</a></li>
+                    <li><a href="https://web.tiom.nu">Webbutveckling</a></li>
+                </ul>
+            </nav>
+            <div class="footer-col">
+                <h2 class="footer-heading">Kontakt</h2>
+                <ul class="footer-list footer-contact-list">
+                    <li><a href="mailto:tiom.info@gmail.com">tiom.info@gmail.com</a></li>
+                    <li><a href="tel:+46706533535">+46 70 653 35 35</a></li>
+                    <li><span>Linköping, Sverige</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 TIOM. Alla rättigheter förbehållna.</p>
+                <ul class="footer-legal">
+                    <li><a href="https://web.tiom.nu/villkor.html">Villkor</a></li>
+                    <li><a href="https://web.tiom.nu/integritetspolicy.html">Integritetspolicy</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
     <script src="js/site.js"></script>

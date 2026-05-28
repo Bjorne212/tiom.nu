@@ -28,6 +28,15 @@ Sekundärt: Uppdrag från andra orter efter överenskommelse
 - index.html: Startsida med huvudinformation om TIOM
 - about.html: Information om TIOM, dess tjänster och expertis
 - services.html: Tjänster uppdelade i områden med konkreta uppdrag
+- datorhjalp-linkoping.html: Datorhjälp i Linköping - långsam dator, krascher, lösenord, programhjälp
+- wifi-router-hjalp-linkoping.html: Wi-Fi-hjälp och routerinstallation i Linköping
+- skrivare-tv-installation-linkoping.html: Installation av skrivare, TV, Chromecast och surfplattor
+- ny-dator-backup-sakerhet-linkoping.html: Ny dator, backup och säkerhet
+- guider/: Guidesektion med praktiska råd
+- guider/varfor-blir-datorn-langsam.html: Guide om varför datorer blir långsamma och vad man kan göra
+- guider/battre-wifi-tackning-hemma.html: Guide om Wi-Fi-täckning, placering, mesh och kanaler
+- guider/backup-av-bilder-och-dokument.html: Guide om backup-lösningar (iCloud, OneDrive, Google, extern hårddisk)
+- guider/valja-tv-vm-2026.html: Guide om hur man väljer TV inför fotbolls-VM 2026 (storlek, OLED/QLED, Hz, HDR, smart-TV)
 - book.html: Bokningstjänst för TIOM:s uppdrag
 
 ## Varumärke och ton
