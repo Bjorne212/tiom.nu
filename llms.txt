@@ -37,6 +37,8 @@ Sekundärt: Uppdrag från andra orter efter överenskommelse
 - guider/battre-wifi-tackning-hemma.html: Guide om Wi-Fi-täckning, placering, mesh och kanaler
 - guider/backup-av-bilder-och-dokument.html: Guide om backup-lösningar (iCloud, OneDrive, Google, extern hårddisk)
 - guider/valja-tv-vm-2026.html: Guide om hur man väljer TV inför fotbolls-VM 2026 (storlek, OLED/QLED, Hz, HDR, smart-TV)
+- villkor.html: Allmänna villkor för TIOM:s tjänster - bokning, pris, RUT-avdrag, hembesök, ångerrätt, ansvar
+- integritetspolicy.html: GDPR-integritetspolicy - vilka uppgifter samlas in, varför och dina rättigheter
 - book.html: Bokningstjänst för TIOM:s uppdrag
 
 ## Varumärke och ton

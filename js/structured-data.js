@@ -321,6 +321,14 @@ const structuredDataByPath = {
         { name: "Hem", url: "https://tiom.nu/" },
         { name: "Guider", url: "https://tiom.nu/guider/" },
         { name: "Välja TV inför fotbolls-VM 2026", url: "https://tiom.nu/guider/valja-tv-vm-2026.html" }
+    ])],
+    "/villkor.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+        { name: "Hem", url: "https://tiom.nu/" },
+        { name: "Villkor", url: "https://tiom.nu/villkor.html" }
+    ])],
+    "/integritetspolicy.html": [webSiteSchema, localBusinessSchema, breadcrumb([
+        { name: "Hem", url: "https://tiom.nu/" },
+        { name: "Integritetspolicy", url: "https://tiom.nu/integritetspolicy.html" }
     ])]
 };
 
