@@ -1,6 +1,3 @@
-# www → non-www
-https://www.tiom.nu/* https://tiom.nu/:splat 301
-
 # Canonical homepage path
 /index.html / 301
 
